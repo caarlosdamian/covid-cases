@@ -1,37 +1,45 @@
 import  { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import axios from 'axios'  
 import styled from '@mui/styled-engine-sc'
-
+import {DataGrid, GridColDef, GridRowsProp, GridToolbar} from '@mui/x-data-grid'
 
 function App() {
-  const [count, setCount] = useState(0)
+  //Hard coding for testing
 
+  const [arr, setArr] = useState([]);
   
+  const columns: GridColDef[] =[ 
+    { field: 'date', headerName: "ID",  width: 150},
+    { field: 'positive', headerName: "Positive",  width: 150}, 
+    { field: 'negative', headerName: "Negative",  width: 150},
+    { field: 'pending', headerName: "Pending",  width: 150},
+    { field: 'death', headerName: "Deaths",  width: 150}, 
+    { field: 'totalTestResults', headerName: "Total",  width: 150}];
 
+
+  //Get data for table
+
+  const getData = async () =>{
+    const getter = await fetch("https://api.covidtracking.com/v1/us/daily.json");
+    const data = await getter.json();
+    console.log("Data: ", data)
+    setArr(data);
+    return(data);
+  }
+  
+  
+  console.log("Get data:", getData());
+  
+  const rows: GridRowsProp =  arr;
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <DataGrid
+      getRowId={(row) => row.date}
+         rows={rows}
+         columns={columns}
+         components={{Toolbar: GridToolbar,}}
+      />
     </div>
   )
 }
