@@ -1,12 +1,11 @@
-import  { useState } from 'react'
-import './App.css'
-import axios from 'axios'  
-import styled from '@mui/styled-engine-sc'
+import  { useState, useEffect } from 'react' 
 import {DataGrid, GridColDef, GridRowsProp, GridToolbar} from '@mui/x-data-grid'
-import { getImageListItemBarUtilityClass } from '@mui/material'
+import styled from '@mui/styled-engine-sc'
+import './App.css'
+
 
 function App() {
-  //Hard coding for testing
+  
 
   const [arr, setArr] = useState([]);
   
@@ -19,20 +18,21 @@ function App() {
     { field: 'totalTestResults', headerName: "Total",  width: 150}];
 
 
-  //Get data for table
+ 
 
   const getData = async () =>{
     const getter = await fetch("https://api.covidtracking.com/v1/us/daily.json");
     const data = await getter.json();
-    console.log("Data: ", data)
     setArr(data);
-    return(data);
   }
-  
-  
-  console.log("Get data:", getData());
-  
+
+
+  useEffect(() => {
+    getData();
+  }, [])
+
   const rows: GridRowsProp =  arr;
+
   return (
     <div className="App">
       <DataGrid
