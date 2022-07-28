@@ -37,6 +37,8 @@ function App() {
 
   const rows: GridRowsProp =  arr;
 
+  
+
   return (
     <div className="App">
       <DataGrid
@@ -50,4 +52,3 @@ function App() {
 }
 
 export default App
-
