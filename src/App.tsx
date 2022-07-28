@@ -15,7 +15,11 @@ function App() {
     { field: 'negative', headerName: "Negative",  width: 150},
     { field: 'pending', headerName: "Pending",  width: 150},
     { field: 'death', headerName: "Deaths",  width: 150}, 
-    { field: 'totalTestResults', headerName: "Total",  width: 150}];
+    { field: 'totalTestResults', headerName: "Total",  width: 150},
+    { field: 'states', headerName: "States",  width: 150},
+    { field: 'hospitalized', headerName: "Hospitalized",  width: 150},
+    { field: 'deathIncrease', headerName: "Death Increase",  width: 150},
+    { field: 'hospitalizedIncrease', headerName: "Hospitalized Increase",  width: 150}];
 
 
  
