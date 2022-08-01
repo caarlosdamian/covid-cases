@@ -98,16 +98,13 @@ function App() {
     );
     const data = await getter.json();
     setArr(data);
-  }
-
+  };
 
   useEffect(() => {
     getData();
-  }, [])
+  }, []);
 
-  const rows: GridRowsProp =  arr;
-
-  
+  const rows: GridRowsProp = arr;
 
   return (
     <div className="App">
