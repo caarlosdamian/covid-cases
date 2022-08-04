@@ -1,8 +1,8 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react';
-import useLocalStorage from "./useLocalStorage"
 
 export const useApi = () => {
-  const [fetchData, setFetchData] = useLocalStorage('COVID_CASES_DATA', []);
+  const [fetchData, setFetchData] = useState([]);
 
   const getData = async () => {
     const getter = await fetch(
@@ -10,10 +10,15 @@ export const useApi = () => {
     );
     const data = await getter.json();
     setFetchData(data);
+    window.localStorage.setItem('COVID_CASES_DATA', JSON.stringify(data));
   };
 
   useEffect(() => {
-    getData();
+    window.localStorage.getItem('COVID_CASES_DATA')
+      ? setFetchData(
+          JSON.parse(window.localStorage.getItem('COVID_CASES_DATA') || '{}')
+        )
+      : getData();
   }, []);
 
   return { fetchData };
