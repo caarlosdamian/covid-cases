@@ -13,7 +13,7 @@ export type Irow = {
   dateChecked: string;
   death: null | number;
   hospitalized: null | number;
-  totalTestResults: 0;
+  totalTestResults: number;
   lastModified: string;
   recovered: null | number;
   total: number;

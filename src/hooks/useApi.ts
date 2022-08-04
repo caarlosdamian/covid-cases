@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useState } from 'react';
 
 export const useApi = () => {
@@ -9,10 +10,15 @@ export const useApi = () => {
     );
     const data = await getter.json();
     setFetchData(data);
+    window.localStorage.setItem('COVID_CASES_DATA', JSON.stringify(data));
   };
 
   useEffect(() => {
-    getData();
+    window.localStorage.getItem('COVID_CASES_DATA')
+      ? setFetchData(
+          JSON.parse(window.localStorage.getItem('COVID_CASES_DATA') || '{}')
+        )
+      : getData();
   }, []);
 
   return { fetchData };
