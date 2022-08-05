@@ -8,7 +8,7 @@ interface ITable {
 
 export function Table({ rows, columns }: ITable) {
   return (
-    <div className="table-container">
+    <div data-testid="table" className="table-container">
       <DataGrid
         className="datagrid-table"
         getRowId={(row: Irow) => row.date}

@@ -1,0 +1,101 @@
+// Vitest Snapshot v1
+
+exports[`All Snapshots Match > Column's snapshot match 1`] = `
+[
+  {
+    "field": "date",
+    "headerName": "ID",
+    "width": 150,
+  },
+  {
+    "field": "lastModified",
+    "headerName": "Date",
+    "type": "date",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "states",
+    "headerName": "Infected States",
+    "type": "number",
+    "width": 150,
+  },
+  {
+    "field": "positive",
+    "headerName": "Positive",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "positiveIncrease",
+    "headerName": "Positive Increase",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "negative",
+    "headerName": "Negative",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "negativeIncrease",
+    "headerName": "Negative Increase",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "pending",
+    "headerName": "Pending",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "death",
+    "headerName": "Deaths",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "deathIncrease",
+    "headerName": "Death Increase",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "totalTestResults",
+    "headerName": "Total Tests",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "totalTestResultsIncrease",
+    "headerName": "Total Increase",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "hospitalized",
+    "headerName": "Hospitalized",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 150,
+  },
+  {
+    "field": "hospitalizedIncrease",
+    "headerName": "Hospitalized Increase",
+    "type": "number",
+    "valueFormatter": [Function],
+    "width": 170,
+  },
+]
+`;
