@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useEffect, useState } from 'react';
+import fetch from 'node-fetch';
 
 export const useApi = () => {
   const [fetchData, setFetchData] = useState([]);
