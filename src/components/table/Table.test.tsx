@@ -10,7 +10,7 @@ describe('Components Render Correctly', () => {
     render(<Table rows={mockRows} columns={columns} />);
   });
   it('Renders Table without crashing', () => {
-    console.log(screen.debug());
+    expect(screen.getByTestId('table')).toBeDefined();
   });
   // Date should be shown while ID should not
   it('Renders columns Correctly', () => {
