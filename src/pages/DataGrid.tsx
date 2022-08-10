@@ -7,9 +7,5 @@ export function DataGrid() {
   const { fetchData } = useApi();
   const rows: GridRowsProp = fetchData;
 
-  return (
-    <div>
-      <Table columns={columns} rows={rows} />
-    </div>
-  );
+  return <Table columns={columns} rows={rows} />;
 }
