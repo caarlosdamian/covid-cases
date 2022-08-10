@@ -1,17 +1,16 @@
-import { GridRowsProp } from '@mui/x-data-grid';
-import { columns } from './utils/tableColumns';
-import { useApi } from './hooks/useApi';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Table } from './components/table/Table';
+import { Login, DataGrid } from './pages';
 
 function App() {
-  const { fetchData } = useApi();
-
-  const rows: GridRowsProp = fetchData;
-
   return (
     <div className="App">
-      <Table columns={columns} rows={rows} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DataGrid />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
