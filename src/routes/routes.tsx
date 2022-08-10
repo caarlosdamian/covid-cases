@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Login, DataGrid } from '../pages';
+import { Login } from '../pages';
+import { DataGrid } from '../components/DataGrid';
 
 export function Router() {
   return (
