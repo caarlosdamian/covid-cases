@@ -1,7 +1,7 @@
 export type Irow = {
   date: number;
   states: number;
-  positive: number;
+  positive: null | number;
   negative: null | number;
   pending: null | number;
   hospitalizedCurrently: null | number;
