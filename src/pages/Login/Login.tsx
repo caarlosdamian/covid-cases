@@ -39,6 +39,7 @@ export function Login() {
             Email address
           </label>
           <input
+            data-testid="input-email"
             id="emailText"
             className="input-text"
             type="email"

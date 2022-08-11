@@ -27,6 +27,10 @@
     margin-left: 137px;
   }
   
+ .form-container{
+    background: #ffffff;
+  }
+
   .header {
     margin-top: 300px;
     margin-bottom: 10px;
@@ -71,6 +75,7 @@
     height: 64px;
     border: 1px solid #8692a6;
     border-radius: 6px;
+    background: #ffffff;
   
     /*text*/
     font-family: "Inter";
