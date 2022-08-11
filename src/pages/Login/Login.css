@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .login-app {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+  }
+  
+  .image-container {
+    height: 1024px;
+    width: 773px;
+    background: #2c73eb;
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-login {
+    margin-right: 50px;
+    margin-top: 30px;
+    margin-left: 137px;
+  }
+  
+  .header {
+    margin-top: 300px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+  
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+  }
+  
+  .text {
+    margin-left: 100px;
+    margin-bottom: 40px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #8692a6;
+  }
+  
+  .label-text {
+    margin-left: 100px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #696f79;
+  }
+  
+  .input-text {
+    margin-top: 14px;
+    margin-left: 100px;
+    margin-bottom: 24px;
+    width: 426px;
+    height: 64px;
+    border: 1px solid #8692a6;
+    border-radius: 6px;
+  
+    /*text*/
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #494949;
+    padding-left: 30px;
+  }
+  
+  .span-error{
+    
+    margin-left: 100px ;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #b31c30;
+  }
+  
+  .checkbox-input {
+    margin-left: 100px;
+  }
+  
+  .label-checkbox {
+    margin-left: 10px;
+    margin-top: 29px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #696f79;
+  }
+  
+  .button-submit {
+    margin-top: 29px;
+    margin-left: 100px;
+    margin-bottom: 43px;
+  
+    background: #2c73eb;
+    border-radius: 6px;
+    border: none;
+    width: 426px;
+    height: 64px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+  }
+  
+  .span-text {
+    margin-left: 150px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #696f79;
+  }
+  
+  .span-link {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2c73eb;
+  }
+  
