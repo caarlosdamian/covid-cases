@@ -2,12 +2,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import img from '../../assets/image_login.png';
 import './Login.css';
-
-interface IFormInputs {
-  email: string;
-  password: string;
-  remember: boolean;
-}
+import { IFormInputs } from '../../interfaces';
 
 export function Login() {
   const {
