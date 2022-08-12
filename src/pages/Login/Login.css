@@ -5,15 +5,12 @@
   }
   
   .login-app {
-    padding: 0;
-    margin: 0;
+  
     height: auto;
     display: flex;
-    box-sizing: border-box;
-    flex-direction: row;
   }
   
-  .image-container {
+   .image-container {
     height: 1024px;
     width: 773px;
     background: #2c73eb;
@@ -21,12 +18,7 @@
     align-items: center;
   }
   
-  .image-login {
-    margin-right: 50px;
-    margin-top: 30px;
-    margin-left: 137px;
-  }
-  
+
  .form-container{
     background: #ffffff;
   }

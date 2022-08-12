@@ -1,8 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import './Login.css';
-import imageLogin from '../../assets/image_login.png';
 
 interface IFormInputs {
   email: string;
@@ -21,26 +19,22 @@ export function Login() {
 
   return (
     <div className="login-app">
-      <div className="image-container">
-        <img className="image-login" src={imageLogin} alt="Imagen Login" />
-      </div>
+      <div className="image-container" />
 
       <div className="form-container">
         <h1 className="header">Account Login</h1>
         <p className="text">
-          {' '}
           If you are already a member you can login with <br />
           your email address and password.
         </p>
 
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} data-testid="loginForm">
           <label htmlFor="emailText" className="label-text">
-            {' '}
             Email address
           </label>
           <input
-            data-testid="input-email"
             id="emailText"
+            data-testid="emailTest"
             className="input-text"
             type="email"
             {...register('email', { required: true })}
@@ -56,6 +50,7 @@ export function Login() {
           </label>
           <input
             id="passwordText"
+            data-testid="passwordTest"
             className="input-text"
             type="password"
             {...register('password', { required: true })}
@@ -77,14 +72,16 @@ export function Login() {
           </label>
           <br />
 
-          <button type="submit" className="button-submit">
-            {' '}
-            Register Account{' '}
+          <button
+            type="submit"
+            className="button-submit"
+            data-testid="submitButton"
+          >
+            Register Account
           </button>
         </form>
         <span className="span-text">
-          Dont have and account ?{' '}
-          <span className="span-link">Sing up here</span>{' '}
+          Dont have and account ?<span className="span-link">Sing up here</span>
         </span>
       </div>
     </div>
