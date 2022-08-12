@@ -17,11 +17,4 @@ describe('Components Render Correctly', () => {
     expect(screen.queryByText('Date')).toBeDefined();
     expect(screen.queryByText('ID')).toBeNull();
   });
-  // ID can be turned on and off by the Columns
-  it.skip('Shows hidden Columns', async () => {
-    fireEvent.click(screen.getByText('Columns'));
-    fireEvent.click(screen.getByText('ID'));
-    fireEvent.click(screen.getByText('Columns'));
-    expect(await screen.findAllByText('ID')).toBeDefined();
-  });
 });
