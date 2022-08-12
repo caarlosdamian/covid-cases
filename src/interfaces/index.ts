@@ -25,3 +25,9 @@ export type Irow = {
   totalTestResultsIncrease: number;
   hash: string;
 };
+
+export interface IFormInputs {
+  email: string;
+  password: string;
+  remember: boolean;
+}

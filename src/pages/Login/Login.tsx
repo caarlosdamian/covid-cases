@@ -1,12 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useForm, SubmitHandler } from 'react-hook-form';
 import './Login.css';
-
-interface IFormInputs {
-  email: string;
-  password: string;
-  remember: boolean;
-}
+import { IFormInputs } from '../../interfaces';
 
 export function Login() {
   const {
