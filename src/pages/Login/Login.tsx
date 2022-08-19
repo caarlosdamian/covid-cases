@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useForm, SubmitHandler } from 'react-hook-form';
 import img from '../../assets/image_login.png';
-import './Login.css';
+import './Login.scss';
 import { IFormInputs } from '../../interfaces';
 
 export function Login() {

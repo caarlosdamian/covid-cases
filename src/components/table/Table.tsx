@@ -1,6 +1,6 @@
 import { DataGrid, GridColDef, GridToolbar } from '@mui/x-data-grid';
 import { Irow } from '../../interfaces';
-import './Table.css';
+import './Table.scss';
 
 interface ITable {
   rows: readonly Irow[];

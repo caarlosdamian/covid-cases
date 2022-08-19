@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export type Irow = {
   date: number;
   states: number;
@@ -30,4 +32,17 @@ export interface IFormInputs {
   email: string;
   password: string;
   remember: boolean;
+}
+
+export interface ISidebarMenuItem {
+  id: string;
+  label: string;
+  icon: IconType;
+  url: string;
+}
+
+export interface ISidebarMenuCard {
+  id: string;
+  displayName: string;
+  photoUrl: string;
 }
