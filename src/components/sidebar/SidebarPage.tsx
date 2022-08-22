@@ -39,7 +39,7 @@ export function SidebarPage() {
   };
 
   return (
-    <div className="SidebarPage">
+    <div className="sidebar-page">
       <SidebarMenu items={items} card={card} />
     </div>
   );

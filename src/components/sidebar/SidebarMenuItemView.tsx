@@ -12,13 +12,13 @@ export function SidebarMenuItemView({
   isOpen,
 }: SidebarMenuItemViewProps) {
   return (
-    <div className="SidebarMenuItemView">
+    <div className="sidebar_menu-item-view">
       <a href={item.url}>
-        <div className={classNames('ItemContent', isOpen ? '' : 'collapsed')}>
+        <div className={classNames('item-content', isOpen ? '' : 'collapsed')}>
           <div className="icon">
             <item.icon size="20" />
           </div>
-          <span className="label"> {item.label}</span>
+          <span className="sidebar_label"> {item.label}</span>
         </div>
       </a>
     </div>

@@ -21,23 +21,27 @@ export function SidebarMenu({ items, card }: SidebarMenuProps) {
   return (
     <div
       data-testid="sidebar"
-      className={classNames('SidebarMenu', isOpen ? 'expanded' : 'collapsed')}
+      className={classNames('sidebar-menu', isOpen ? 'expanded' : 'collapsed')}
     >
       <div className="menu-button">
-        <button type="button" className="hamburgerbutton" onClick={handleClick}>
+        <button
+          type="button"
+          className="hamburger-button"
+          onClick={handleClick}
+        >
           <VscListFlat />
         </button>
       </div>
 
       {isOpen ? (
-        <div className="Search-content-expanded">
+        <div className="search-content-expanded">
           <div className="search-input">
             <VscSearch size="20" className="search-icon" />
           </div>
           <input placeholder="Search" className="input-search" />
         </div>
       ) : (
-        <div className="Search-content-collapsed">
+        <div className="search-content-collapsed">
           <div className="search-input">
             <VscSearch size="20" />
           </div>

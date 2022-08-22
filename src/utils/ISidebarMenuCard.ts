@@ -1,4 +1,4 @@
-import { ISidebarMenuCard } from '../../interfaces/index';
+import { ISidebarMenuCard } from '../interfaces/index';
 
 export const card: ISidebarMenuCard = {
   id: 'card02',

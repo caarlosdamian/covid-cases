@@ -9,7 +9,7 @@ import {
   VscSettingsGear,
 } from 'react-icons/vsc';
 
-import { ISidebarMenuItem } from '../../interfaces';
+import { ISidebarMenuItem } from '../interfaces/index';
 
 export const items: ISidebarMenuItem[] = [
   {

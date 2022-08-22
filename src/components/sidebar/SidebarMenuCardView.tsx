@@ -12,11 +12,20 @@ export function SidebarMenuCardView({
   isOpen,
 }: SidebarMenuCardViewProps) {
   return (
-    <div className="SidebarMenuCardView">
-      <img className="profile" src={card.photoUrl} alt="User" width="100%" />
-      <div className={classNames('profileInfo', isOpen ? '' : 'collapsed')}>
-        <div className="name">
-          {' '}
+    <div className="sidebar_menu-card-view">
+      <img
+        className="sidebar_profile-img"
+        src={card.photoUrl}
+        alt="User"
+        width="100%"
+      />
+      <div
+        className={classNames(
+          'sidebar_profile-info',
+          isOpen ? '' : 'collapsed'
+        )}
+      >
+        <div className="sidebar_name">
           <span> {card.displayName}</span>
         </div>
       </div>
