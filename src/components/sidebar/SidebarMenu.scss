@@ -7,9 +7,6 @@
     display: flex;
 }
 
-.sidebar-page{
-    flex: 2;
-}
 
 
 .sidebar-menu{
@@ -66,7 +63,7 @@
     margin-left: 10px;
 }
 
-.search-input{
+.sidebar_search-input{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,11 +72,11 @@
     padding-left: 20px;
 }
 
-.search-icon{
+.sidebar_search-icon{
     padding-left: 0px;
 }
 
-.input-search{
+.sidebar_input-search{
     background: #F6F8FA;
     border: none;
     outline: none;

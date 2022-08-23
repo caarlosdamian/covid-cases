@@ -13,11 +13,12 @@ interface SidebarMenuProps {
 }
 
 export function SidebarMenu({ items, card }: SidebarMenuProps) {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  function handleClick() {
+  const handleToggle = () => {
     setIsOpen(!isOpen);
-  }
+  };
+
   return (
     <div
       data-testid="sidebar"
@@ -27,7 +28,7 @@ export function SidebarMenu({ items, card }: SidebarMenuProps) {
         <button
           type="button"
           className="hamburger-button"
-          onClick={handleClick}
+          onClick={handleToggle}
         >
           <VscListFlat />
         </button>
@@ -36,13 +37,13 @@ export function SidebarMenu({ items, card }: SidebarMenuProps) {
       {isOpen ? (
         <div className="search-content-expanded">
           <div className="search-input">
-            <VscSearch size="20" className="search-icon" />
+            <VscSearch size="20" className="sidebar_search-icon" />
           </div>
-          <input placeholder="Search" className="input-search" />
+          <input placeholder="Search" className="sidebar_input-search" />
         </div>
       ) : (
         <div className="search-content-collapsed">
-          <div className="search-input">
+          <div className="sidebar_search-input">
             <VscSearch size="20" />
           </div>
         </div>
