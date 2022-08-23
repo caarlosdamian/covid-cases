@@ -24,7 +24,7 @@ export function SidebarMenu({ items, card }: SidebarMenuProps) {
       data-testid="sidebar"
       className={classNames('sidebar-menu', isOpen ? 'expanded' : 'collapsed')}
     >
-      <div className="menu-button">
+      <div className="sidebar_menu-button">
         <button
           type="button"
           className="hamburger-button"
