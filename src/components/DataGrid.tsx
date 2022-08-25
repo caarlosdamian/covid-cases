@@ -7,7 +7,7 @@ import { Irow } from '../interfaces';
 import { SidebarPage } from './sidebar/SidebarPage';
 import './sidebar/SidebarMenu.scss';
 
-export function DataGrid() {
+export const DataGrid = () => {
   const { data, error, isLoading } = useGetCovidDataQuery('x');
   const rows: GridRowsProp = data as Irow[];
 
@@ -23,4 +23,4 @@ export function DataGrid() {
       ) : null}
     </div>
   );
-}
+};

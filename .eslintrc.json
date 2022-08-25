@@ -27,6 +27,12 @@
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-useless-constructor": "error",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {
