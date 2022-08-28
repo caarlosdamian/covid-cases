@@ -39,10 +39,37 @@ export interface ISidebarMenuItem {
   label: string;
   icon: IconType;
   url: string;
+  component?: JSX.Element;
+  collapse?: boolean;
 }
 
 export interface ISidebarMenuCard {
   id: string;
   displayName: string;
   photoUrl: string;
+}
+
+export interface State {
+  api: {
+    queries: {};
+    mutations: {};
+    provided: {};
+    subscriptions: {};
+    config: {
+      online: boolean;
+      focused: boolean;
+      middlewareRegistered: boolean;
+      refetchOnFocus: boolean;
+      refetchOnReconnect: boolean;
+      refetchOnMountOrArgChange: boolean;
+      keepUnusedDataFor: number;
+      reducerPath: string;
+    };
+  };
+  loginSlice: {
+    value: boolean;
+  };
+  toggleSlice: {
+    isOpen: boolean;
+  };
 }

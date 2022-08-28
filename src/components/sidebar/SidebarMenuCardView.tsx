@@ -1,5 +1,4 @@
 import { ISidebarMenuCard } from '../../interfaces/index';
-import { classNames } from '../../utils/classes';
 import './SidebarMenu.scss';
 
 interface SidebarMenuCardViewProps {
@@ -7,28 +6,24 @@ interface SidebarMenuCardViewProps {
   isOpen: boolean;
 }
 
-export function SidebarMenuCardView({
+export const SidebarMenuCardView = ({
   card,
   isOpen,
-}: SidebarMenuCardViewProps) {
-  return (
-    <div className="sidebar_menu-card-view">
-      <img
-        className="sidebar_profile-img"
-        src={card.photoUrl}
-        alt="User"
-        width="100%"
-      />
-      <div
-        className={classNames(
-          'sidebar_profile-info',
-          isOpen ? '' : 'collapsed'
-        )}
-      >
+}: SidebarMenuCardViewProps) => (
+  <div className={`sidebar_menu-card-view ${isOpen ? '' : 'collapsed'}`}>
+    <img
+      className={`sidebar_profile-img ${isOpen ? '' : 'collapsed'}`}
+      src={card.photoUrl}
+      alt="User"
+    />
+    {isOpen ? (
+      <div className={`sidebar_profile-info ${isOpen ? '' : 'collapsed'}`}>
         <div className="sidebar_name">
           <span> {card.displayName}</span>
         </div>
       </div>
-    </div>
-  );
-}
+    ) : (
+      ''
+    )}
+  </div>
+);

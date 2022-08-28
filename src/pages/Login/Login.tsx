@@ -4,7 +4,7 @@ import img from '../../assets/image_login.png';
 import './Login.css';
 import { IFormInputs } from '../../interfaces';
 
-export function Login() {
+export const Login = () => {
   const {
     register,
     handleSubmit,
@@ -90,4 +90,4 @@ export function Login() {
       </div>
     </div>
   );
-}
+};
