@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export type Irow = {
   date: number;
   states: number;
@@ -30,4 +32,44 @@ export interface IFormInputs {
   email: string;
   password: string;
   remember: boolean;
+}
+
+export interface ISidebarMenuItem {
+  id: string;
+  label: string;
+  icon: IconType;
+  url: string;
+  component?: JSX.Element;
+  collapse?: boolean;
+}
+
+export interface ISidebarMenuCard {
+  id: string;
+  displayName: string;
+  photoUrl: string;
+}
+
+export interface State {
+  api: {
+    queries: {};
+    mutations: {};
+    provided: {};
+    subscriptions: {};
+    config: {
+      online: boolean;
+      focused: boolean;
+      middlewareRegistered: boolean;
+      refetchOnFocus: boolean;
+      refetchOnReconnect: boolean;
+      refetchOnMountOrArgChange: boolean;
+      keepUnusedDataFor: number;
+      reducerPath: string;
+    };
+  };
+  loginSlice: {
+    value: boolean;
+  };
+  toggleSlice: {
+    isOpen: boolean;
+  };
 }

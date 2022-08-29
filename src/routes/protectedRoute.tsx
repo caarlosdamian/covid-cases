@@ -7,13 +7,13 @@ interface IProtectedRoute {
   children: ReactElement;
 }
 
-export function ProtectedRoute({
+export const ProtectedRoute = ({
   user,
   redirectPath = 'login',
   children,
-}: IProtectedRoute) {
+}: IProtectedRoute) => {
   if (!user) {
     return <Navigate to={redirectPath} replace />;
   }
   return children;
-}
+};

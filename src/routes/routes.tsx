@@ -2,10 +2,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Login } from '../pages';
-import { DataGrid } from '../components/DataGrid';
 import { ProtectedRoute } from './protectedRoute';
+import { Content } from '../components/content/Content';
+import { items } from '.';
 
-export function Router() {
+export const Router = () => {
   interface IState {
     loginSlice: { value: boolean };
   }
@@ -14,16 +15,18 @@ export function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute user={loginState.value} redirectPath="/login">
-              <DataGrid />
-            </ProtectedRoute>
-          }
-        />
+        {items.map((item) => (
+          <Route
+            path={item.url}
+            element={
+              <ProtectedRoute user={loginState.value} redirectPath="/login">
+                <Content>{item.component}</Content>
+              </ProtectedRoute>
+            }
+          />
+        ))}
         <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};

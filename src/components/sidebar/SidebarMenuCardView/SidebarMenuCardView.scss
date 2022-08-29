@@ -1,0 +1,48 @@
+@mixin transition($property) {
+  transition: $property 0.2 ease-in-out;
+}
+
+.sidebar_menu-card-view {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 15px;
+  &.collapsed {
+    justify-content: center;
+  }
+
+  .sidebar_profile-img {
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    &.collapsed {
+      width: 30px;
+      height: 30px;
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+  .sidebar_profile-info {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 80px;
+    @include transition(height);
+
+    &.collapsed {
+      opacity: 0;
+      height: 0;
+    }
+  }
+  .sidebar_name {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.01em;
+    color: #8d91a0;
+  }
+}

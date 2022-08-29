@@ -1,0 +1,21 @@
+.content__container {
+  background: #f7f8fc;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .card__padding {
+    padding-left: 56px;
+    padding-top: 24px;
+
+    .card__container {
+      min-width: 70vw;
+      min-height: 80vh;
+      &.collapse {
+        min-width: 85vw;
+        min-height: 80vh;
+      }
+    }
+  }
+}

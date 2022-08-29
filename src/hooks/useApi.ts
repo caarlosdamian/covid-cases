@@ -5,7 +5,7 @@ export const useApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.covidtracking.com/v1/' }),
   tagTypes: [],
   endpoints: (builder) => ({
-    getCovidData: builder.query<Irow[], string>({
+    getCovidData: builder.query<Irow[], void>({
       query: () => `us/daily.json`,
     }),
   }),
