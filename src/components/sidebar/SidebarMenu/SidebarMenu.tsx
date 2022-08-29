@@ -4,12 +4,12 @@ import {
   ISidebarMenuCard,
   ISidebarMenuItem,
   State,
-} from '../../interfaces/index';
-import { SidebarMenuItemView } from './SidebarMenuItemView';
-import { SidebarMenuCardView } from './SidebarMenuCardView';
+} from '../../../interfaces/index';
+import { SidebarMenuItemView } from '../SidebarMenuItemView/SidebarMenuItemView';
+import { SidebarMenuCardView } from '../SidebarMenuCardView/SidebarMenuCardView';
 
 import './SidebarMenu.scss';
-import { toggle } from '../../redux/toggleSlice';
+import { toggle } from '../../../redux/toggleSlice';
 
 interface SidebarMenuProps {
   items: ISidebarMenuItem[];

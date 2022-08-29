@@ -1,5 +1,5 @@
-import { ISidebarMenuCard } from '../../interfaces/index';
-import './SidebarMenu.scss';
+import { ISidebarMenuCard } from '../../../interfaces/index';
+import './SidebarMenuCardView.scss';
 
 interface SidebarMenuCardViewProps {
   card: ISidebarMenuCard;

@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../../test-utils';
 import { SidebarMenu } from './SidebarMenu';
-import { card } from '../../utils/ISidebarMenuCard';
-import { items } from '../../utils/ISiderbarMenuItem';
+import { card } from '../../../utils/ISidebarMenuCard';
+import { items } from '../../../utils/ISiderbarMenuItem';
 
 describe('Sidebar component render correctly', () => {
   beforeAll(() => {
