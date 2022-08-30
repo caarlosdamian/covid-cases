@@ -156,16 +156,4 @@ export const columns: GridColDef[] = [
       return numberWithCommas(params.value);
     },
   },
-  {
-    field: 'hospitalizedIncrease',
-    headerName: 'Hospitalized Increase',
-    width: 170,
-    type: 'number',
-    valueFormatter: (params: GridValueFormatterParams<number>) => {
-      if (params.value == null) {
-        return '0';
-      }
-      return numberWithCommas(params.value);
-    },
-  },
 ];
