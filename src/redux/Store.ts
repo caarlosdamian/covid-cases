@@ -1,8 +1,7 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import storage from 'redux-persist/lib/storage';
-import persistReducer from 'redux-persist/es/persistReducer';
-import persistStore from 'redux-persist/es/persistStore';
+import { persistReducer, persistStore } from 'redux-persist';
 import loginSliceReducer from './loginSlice';
 import toggleSliceReducer from './toggleSlice';
 import { useApi } from '../hooks/useApi';
