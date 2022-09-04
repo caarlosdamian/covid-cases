@@ -8,7 +8,7 @@ import { items } from '.';
 
 export const Router = () => {
   interface IState {
-    loginSlice: { value: boolean };
+    loginSlice: { user: { token: string; isLogged: boolean } };
   }
 
   const loginState = useSelector((state: IState) => state.loginSlice);
@@ -19,7 +19,10 @@ export const Router = () => {
           <Route
             path={item.url}
             element={
-              <ProtectedRoute user={loginState.value} redirectPath="/login">
+              <ProtectedRoute
+                user={loginState.user.isLogged}
+                redirectPath="/login"
+              >
                 <Content>{item.component}</Content>
               </ProtectedRoute>
             }
