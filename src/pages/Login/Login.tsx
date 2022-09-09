@@ -22,13 +22,17 @@ export const Login = () => {
   const dispatch = useDispatch();
 
   const onSubmit: SubmitHandler<IFormInputs> = async (user) => {
-    const post:
-      | { data: string }
-      | { error: FetchBaseQueryError | SerializedError } = await getAuthToken(
-      user
-    );
-    dispatch(login(post));
-    navigate('/', { replace: true });
+    try {
+      const post:
+        | { data: string }
+        | { error: FetchBaseQueryError | SerializedError } = await getAuthToken(
+        user
+      );
+      dispatch(login(post));
+      navigate('/', { replace: true });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
