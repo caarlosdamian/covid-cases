@@ -11,6 +11,7 @@ import {
 import { ISidebarMenuItem } from '../interfaces';
 import { DataGrid } from '../pages/datagrid/DataGrid';
 import { Calendar } from '../pages/calendar/Calendar';
+import { Overview } from '../pages/overview/Overview';
 
 export const items: ISidebarMenuItem[] = [
   {
@@ -27,7 +28,13 @@ export const items: ISidebarMenuItem[] = [
     url: '/calendar',
     component: <Calendar />,
   },
-  { id: '3', label: 'Message', icon: VscComment, url: '/' },
+  {
+    id: '3',
+    label: 'Overview',
+    icon: VscComment,
+    url: '/overview',
+    component: <Overview />,
+  },
   { id: '4', label: 'Projects', icon: VscBriefcase, url: '/' },
   { id: '5', label: 'Progress', icon: VscGraphLine, url: '/' },
   { id: '6', label: 'Goals', icon: VscIssues, url: '/' },
