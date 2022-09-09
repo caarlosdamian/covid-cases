@@ -1,21 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import user from '@testing-library/user-event';
-import { Provider } from 'react-redux';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { store } from '../../redux/Store';
+import { render } from '../../../test-utils';
 import { Login } from './Login';
 
 describe('Login  page component render correctly', () => {
   beforeEach(() => {
-    render(
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Login />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-    );
+    render(<Login />);
   });
 
   test('Login integration test', async () => {

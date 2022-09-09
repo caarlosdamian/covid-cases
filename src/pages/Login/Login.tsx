@@ -4,11 +4,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 import { SerializedError } from '@reduxjs/toolkit';
-import img from '../../assets/image_login.png';
-import './Login.scss';
 import { IFormInputs } from '../../interfaces';
 import { useGetAuthTokenMutation } from '../../redux/api';
 import { login } from '../../redux/loginSlice';
+import img from '../../assets/image_login.png';
+import './Login.scss';
 
 export const Login = () => {
   const [getAuthToken] = useGetAuthTokenMutation();

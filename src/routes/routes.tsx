@@ -11,7 +11,7 @@ export const Router = () => {
     loginSlice: { user: { token: string; isLogged: boolean } };
   }
 
-  const loginState = useSelector((state: IState) => state.loginSlice);
+  const { isLogged } = useSelector((state: IState) => state.loginSlice.user);
   return (
     <BrowserRouter>
       <Routes>
@@ -19,10 +19,7 @@ export const Router = () => {
           <Route
             path={item.url}
             element={
-              <ProtectedRoute
-                user={loginState.user.isLogged}
-                redirectPath="/login"
-              >
+              <ProtectedRoute user={isLogged} redirectPath="/login">
                 <Content>{item.component}</Content>
               </ProtectedRoute>
             }
