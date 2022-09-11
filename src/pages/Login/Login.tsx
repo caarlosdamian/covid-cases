@@ -1,17 +1,39 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import { useNavigate } from 'react-router-dom';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
+import { SerializedError } from '@reduxjs/toolkit';
+import { IFormInputs } from '../../interfaces';
+import { useGetAuthTokenMutation } from '../../redux/api';
+import { login } from '../../redux/loginSlice';
 import img from '../../assets/image_login.png';
 import './Login.scss';
-import { IFormInputs } from '../../interfaces';
 
 export const Login = () => {
+  const [getAuthToken] = useGetAuthTokenMutation();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<IFormInputs>();
 
-  const onSubmit: SubmitHandler<IFormInputs> = (data) => data;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const onSubmit: SubmitHandler<IFormInputs> = async (user) => {
+    try {
+      const post:
+        | { data: string }
+        | { error: FetchBaseQueryError | SerializedError } = await getAuthToken(
+        user
+      );
+      dispatch(login(post));
+      navigate('/', { replace: true });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div className="login-app">
@@ -80,7 +102,7 @@ export const Login = () => {
             className="button-submit"
             data-testid="submitButton"
           >
-            Register Account
+            Login to Account
           </button>
         </form>
         <span className="span-text">
