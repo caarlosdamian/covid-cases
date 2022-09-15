@@ -8,5 +8,6 @@ describe('CardComponent render correctly', () => {
 
   it('Render Card component', () => {
     expect(screen.getByTestId('card-testing')).toBeDefined();
+    expect(screen.getByText(/To do/i)).toBeDefined();
   });
 });

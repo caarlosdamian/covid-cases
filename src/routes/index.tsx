@@ -28,6 +28,7 @@ export const items: ISidebarMenuItem[] = [
     url: '/calendar',
     component: <Calendar />,
   },
+
   {
     id: '3',
     label: 'Overview',

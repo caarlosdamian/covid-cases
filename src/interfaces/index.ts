@@ -66,10 +66,11 @@ export interface State {
       reducerPath: string;
     };
   };
-  loginSlice: {
-    value: boolean;
+  login: {
+    token: string;
+    isLogged: boolean;
   };
-  toggleSlice: {
+  toggle: {
     isOpen: boolean;
   };
 }

@@ -5,11 +5,13 @@ import { persistReducer, persistStore } from 'redux-persist';
 import loginSliceReducer from './loginSlice';
 import toggleSliceReducer from './toggleSlice';
 import { useApi } from '../hooks/useApi';
+import { authApi } from './api';
 
 const reducers = combineReducers({
   [useApi.reducerPath]: useApi.reducer,
-  loginSlice: loginSliceReducer,
-  toggleSlice: toggleSliceReducer,
+  [authApi.reducerPath]: authApi.reducer,
+  login: loginSliceReducer,
+  toggle: toggleSliceReducer,
 });
 
 const persistConfig = {

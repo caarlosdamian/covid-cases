@@ -3,15 +3,51 @@
   margin-top: 10px;
   border: 1px solid #dfe0eb;
   border-radius: 8px;
+  width: 258px;
+  height: 134px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     border-color: #0f044c;
+    cursor: pointer;
+  }
+
+  .card-label {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #9fa2b4;
+
+    &:hover {
+      color: #0f044c;
+    }
+  }
+
+  .card-value {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #252733;
+
+    &:hover {
+      color: #0f044c;
+    }
   }
 }
 
-.card-item {
-  width: 15vw;
-  height: 15vh;
+/*.card-item {
+  width: 240px;
+  height: 120px;
 
   &:hover {
     cursor: pointer;
@@ -20,6 +56,8 @@
   .card-content-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .card-label {
       font-family: Mulish;
@@ -51,22 +89,29 @@
       }
     }
   }
-}
+}*/
 
 @media (min-width: 414px) and (max-width: 820px) {
   .card-container {
     height: 50%;
     width: 50vw;
     justify-content: center;
+    
+
+    .card-label{
+      font-size: 18px;
+    }
+    .card-value{
+      font-size: 25px;
+    }
   }
 
-  .card-item {
+  /*.card-item {
     width: 25vw;
     height: 12vh;
     padding-top: 24px;
-    
+
     .card-content-info {
-      
       .card-label {
         font-size: 18px;
       }
@@ -74,5 +119,5 @@
         font-size: 25px;
       }
     }
-  }
+  }*/
 }

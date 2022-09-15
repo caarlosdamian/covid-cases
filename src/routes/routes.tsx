@@ -5,13 +5,11 @@ import { Login } from '../pages';
 import { ProtectedRoute } from './protectedRoute';
 import { Content } from '../components/content/Content';
 import { items } from '.';
+import { State } from '../interfaces';
 
 export const Router = () => {
-  interface IState {
-    loginSlice: { value: boolean };
-  }
+  const { isLogged } = useSelector((state: State) => state.login);
 
-  const loginState = useSelector((state: IState) => state.loginSlice);
   return (
     <BrowserRouter>
       <Routes>
@@ -19,7 +17,7 @@ export const Router = () => {
           <Route
             path={item.url}
             element={
-              <ProtectedRoute user={loginState.value} redirectPath="/login">
+              <ProtectedRoute user={isLogged} redirectPath="/login">
                 <Content>{item.component}</Content>
               </ProtectedRoute>
             }

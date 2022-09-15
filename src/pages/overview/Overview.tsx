@@ -1,6 +1,6 @@
 import React from 'react';
 import { CardComponent } from '../../components/card/card';
-import './overview.scss';
+import './Overview.scss';
 
 export const Overview = () => (
   <div className="overview-container">

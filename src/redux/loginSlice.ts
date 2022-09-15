@@ -1,23 +1,29 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
+interface ISlice {
+  token: string;
+  isLogged: boolean;
+}
+
+const initialState: ISlice = {
+  isLogged: false,
+  token: '',
+};
+
 const loginSlice = createSlice({
   name: 'login',
-  initialState: {
-    value: true,
-  },
+  initialState,
   reducers: {
-    login: (state: { value: boolean }) => {
-      state.value = true;
-    },
-    logout: (state: { value: boolean }) => {
-      state.value = false;
-    },
+    login: (state: ISlice, action) => ({
+      isLogged: true,
+      token: action.payload.data.data.token,
+    }),
   },
 });
 
 const { actions, reducer } = loginSlice;
 
-export const { login, logout } = actions;
+export const { login } = actions;
 
 export default reducer;

@@ -1,5 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import user from '@testing-library/user-event';
+import { render } from '../../../test-utils';
 import { Login } from './Login';
 
 describe('Login  page component render correctly', () => {
@@ -17,9 +18,6 @@ describe('Login  page component render correctly', () => {
     const passwordInput = screen.getByLabelText(/password/i);
     user.type(passwordInput, PASS);
 
-    const submitButton = screen.getByTestId('submitButton');
-
-    fireEvent.click(submitButton);
     expect(await screen.findAllByTestId('emailTest')).toBeDefined();
     expect(await screen.findAllByTestId('passwordTest')).toBeDefined();
   });
