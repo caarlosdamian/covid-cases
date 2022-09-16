@@ -47,7 +47,6 @@ export const Login = () => {
           If you are already a member you can login with <br />
           your email address and password.
         </p>
-
         <form
           onSubmit={handleSubmit(onSubmit)}
           data-testid="loginForm"
