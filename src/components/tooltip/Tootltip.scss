@@ -7,16 +7,16 @@
     text-transform: uppercase;
     font-size: small;
     margin: 5px;
-    @at-root .error{
+    &.error{
     background-color:tomato;
     border: none;
     }
 
-    @at-root .warning{
+    &.warning{
         background-color:gold;
     }
 
-    @at-root .success{
+    &.success{
         background-color: seagreen;
     }
 
