@@ -7,16 +7,18 @@
     text-transform: uppercase;
     font-size: small;
     margin: 5px;
-}
-
-.red{
+    @at-root .error{
     background-color:tomato;
-}
+    border: none;
+    }
 
-.warn{
-    background-color:gold;
-}
+    @at-root .warning{
+        background-color:gold;
+    }
 
-.succ{
-    background-color: seagreen;
+    @at-root .success{
+        background-color: seagreen;
+    }
+
 }
+    
