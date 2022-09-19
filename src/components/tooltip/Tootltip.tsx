@@ -8,8 +8,7 @@ interface Props {
 
 export const Tooltip = ({ type, label }: Props) => (
   <div data-testid={type} className={`tip ${type}`}>
-    {' '}
-    {label || type}{' '}
+    {label || type}
   </div>
 );
 
