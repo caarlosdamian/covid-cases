@@ -1,4 +1,4 @@
-import './card.scss';
+import './Card.scss';
 
 export interface ICard {
   label: string;

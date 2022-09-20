@@ -8,7 +8,7 @@ import { IFormInputs } from '../../interfaces';
 import { useGetAuthTokenMutation } from '../../redux/api';
 import { login } from '../../redux/loginSlice';
 import img from '../../assets/image_login.png';
-import './Login.css';
+import './Login.scss';
 
 export const Login = () => {
   const [getAuthToken] = useGetAuthTokenMutation();
