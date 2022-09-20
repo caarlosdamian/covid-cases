@@ -7,9 +7,10 @@
     text-transform: uppercase;
     font-size: small;
     margin: 5px;
+
     &.error{
-    background-color:tomato;
-    border: none;
+        background-color:tomato;
+        border: none;
     }
 
     &.warning{
