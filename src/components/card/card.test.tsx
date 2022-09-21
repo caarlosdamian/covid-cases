@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { CardComponent } from './Card';
+import { CardComponent } from './CardComponent';
 
 describe('CardComponent render correctly', () => {
   beforeAll(() => {
