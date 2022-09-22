@@ -46,3 +46,14 @@
     color: #8d91a0;
   }
 }
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .sidebar_menu-card-view {
+    .sidebar_profile-img {
+      &.collapsed {
+        margin-left: 10px;
+        margin-right: 0px;
+      }
+    }
+  }
+}

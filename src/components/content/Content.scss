@@ -10,11 +10,38 @@
     padding-top: 24px;
 
     .card__container {
-      min-width: 70vw;
-      min-height: 80vh;
+      width: 70vw;
+      height: 80vh;
+
       &.collapse {
-        min-width: 85vw;
-        min-height: 80vh;
+        width: 85vw;
+        height: 80vh;
+      }
+    }
+  }
+}
+
+@media (min-width: 360px) and (max-width: 430px) {
+  .content__container {
+    .card__padding {
+      padding-left: 16px;
+
+      .card__container {
+        width: 160px;
+
+        &.collapse {
+          width: 240px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+  .content__container {
+    .card__padding {
+      .card__container {
+        width: 525px;
       }
     }
   }

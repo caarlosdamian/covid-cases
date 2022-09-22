@@ -10,8 +10,8 @@ import { authApi } from './api';
 const reducers = combineReducers({
   [useApi.reducerPath]: useApi.reducer,
   [authApi.reducerPath]: authApi.reducer,
-  loginSlice: loginSliceReducer,
-  toggleSlice: toggleSliceReducer,
+  login: loginSliceReducer,
+  toggle: toggleSliceReducer,
 });
 
 const persistConfig = {

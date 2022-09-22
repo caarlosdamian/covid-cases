@@ -56,6 +56,16 @@
     }
   }
   
+  @media (min-width: 360px) and (max-width: 430px) {
+    .sidebar-menu{
+      &.expanded {
+        width: 200px;
+      }
+    
+    }
+  }
+  
+ 
   
   
   

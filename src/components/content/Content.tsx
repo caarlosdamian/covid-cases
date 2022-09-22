@@ -11,7 +11,7 @@ interface Props {
   children?: JSX.Element[] | JSX.Element;
 }
 export const Content = ({ children = <CircularProgress /> }: Props) => {
-  const { isOpen } = useSelector((state: State) => state.toggleSlice);
+  const { isOpen } = useSelector((state: State) => state.toggle);
   return (
     <div className="content__container">
       <SidebarPage />

@@ -2,25 +2,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface ISlice {
-  user: {
-    token: string;
-    isLogged: boolean;
-  };
+  token: string;
+  isLogged: boolean;
 }
+
+const initialState: ISlice = {
+  isLogged: false,
+  token: '',
+};
 
 const loginSlice = createSlice({
   name: 'login',
-  initialState: {
-    user: {
-      isLogged: false,
-      token: '',
-    },
-  },
+  initialState,
   reducers: {
-    login: (state: ISlice, action) => {
-      state.user.isLogged = action.payload.data.success;
-      state.user.token = action.payload.data.data.token;
-    },
+    login: (state: ISlice, action) => ({
+      isLogged: true,
+      token: action.payload.data.data.token,
+    }),
   },
 });
 

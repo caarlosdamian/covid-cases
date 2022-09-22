@@ -18,7 +18,7 @@ interface SidebarMenuProps {
 
 export const SidebarMenu = ({ items, card }: SidebarMenuProps) => {
   const dispatch = useDispatch();
-  const { isOpen } = useSelector((state: State) => state.toggleSlice);
+  const { isOpen } = useSelector((state: State) => state.toggle);
 
   return (
     <div
