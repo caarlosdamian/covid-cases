@@ -12,9 +12,14 @@ export const List = ({ obj, width, height }: Prop) => (
   <div
     className="list-container"
     style={{ width: width || '100%', height: height || 'auto' }}
+    data-testid="list"
   >
-    {obj.map((item) => (
-      <ListItem title={item[0]} items={item.slice(1)} />
+    {obj.map((item, index, obj) => (
+      <ListItem
+        title={item[0]}
+        item={item[1]}
+        last={index + 1 === obj.length}
+      />
     ))}
   </div>
 );

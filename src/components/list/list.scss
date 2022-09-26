@@ -1,9 +1,9 @@
 .list-container{
-    border: 1px gray solid;
-    border-radius: 18px;
-    padding: 0px 18px;
+    border: 2px #DFE0EB solid;
+    border-radius: 10px;
+    transition: .2s;
 
     &:hover{
-        border: 1px cornflowerblue solid;
+        border: 2px cornflowerblue solid;
     }
 }

@@ -1,16 +1,16 @@
 .list-item{
     display: flex;
     min-width: 100px;
-    border-top: solid 1px lightgray;
-    border-bottom: solid 1px lightgray;
     width: fit-content;
     width: 100%;
-
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    padding: 3px;
     .item-title{
         max-width: 50%;
         min-width: 50px;
-        flex-basis: 30%;
-        padding-left: 5px;
+        flex-basis: 50%;
         color:black;
         text-align: left;
         margin: 5px;
@@ -20,7 +20,7 @@
         text-align: right;
         max-width: 75%;
         min-width: 50px;
-        flex-basis: 75%;
+        flex-basis: 50%;
         color: gray;
         padding-right: 5px;
         display: flex;
@@ -28,8 +28,6 @@
 
         .single-extra{
             flex-basis: 100%;
-            border-left: solid 1px lightgray;
-            padding: 0 5px;
         }
     }
 

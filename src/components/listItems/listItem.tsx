@@ -2,22 +2,23 @@ import './listItem.scss';
 
 interface Props {
   title: string | number;
-  items?: Array<string | number> | string | number;
+  item?: string | number;
+  last?: boolean;
 }
 
-export const ListItem = ({ title, items }: Props) => (
-  <div className="list-item">
+export const ListItem = ({ title, item, last }: Props) => (
+  <div
+    className="list-item"
+    style={{ borderBlockEnd: last ? 'none' : '2px solid #DFE0EB' }}
+  >
     <div className="item-title">{title}</div>
     <div className="item-extras">
-      {typeof items === 'object' ? (
-        items.map((item) => <div className="single-extra">{item}</div>)
-      ) : (
-        <div className="single-extra">{items || 'Nan'}</div>
-      )}
+      <div className="single-extra">{item || 'Nan'}</div>
     </div>
   </div>
 );
 
 ListItem.defaultProps = {
-  items: 'Nan',
+  item: 'Nan',
+  last: false,
 };
