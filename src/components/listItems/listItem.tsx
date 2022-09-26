@@ -6,13 +6,13 @@ interface Props {
 }
 
 export const ListItem = ({ title, items }: Props) => (
-  <div className="listitem">
-    <div className="title">{title}</div>
-    <div className="items">
+  <div className="list-item">
+    <div className="item-title">{title}</div>
+    <div className="item-extras">
       {typeof items === 'object' ? (
-        items.map((item) => <div className="item">{item}</div>)
+        items.map((item) => <div className="single-extra">{item}</div>)
       ) : (
-        <div className="item">{items || 'Nan'}</div>
+        <div className="single-extra">{items || 'Nan'}</div>
       )}
     </div>
   </div>
