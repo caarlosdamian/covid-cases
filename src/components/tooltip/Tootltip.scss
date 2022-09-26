@@ -1,0 +1,25 @@
+.tip{
+    min-width: 110px;
+    width: auto;
+    border-radius: 8px;
+    padding: 2px 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size: small;
+    margin: 5px;
+
+    &.error{
+        background-color:tomato;
+        border: none;
+    }
+
+    &.warning{
+        background-color:gold;
+    }
+
+    &.success{
+        background-color: seagreen;
+    }
+
+}
+    
