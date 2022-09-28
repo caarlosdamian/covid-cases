@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import { List } from './list';
+import { List } from './List';
 
 describe('List render correctly', () => {
   beforeAll(() => {
     render(
       <List
-        obj={[
+        items={[
           ['Hello', 2],
           ['My full', 'Name'],
           ['Erik roberto', 'Carlos Eduardo'],
@@ -19,10 +19,10 @@ describe('List render correctly', () => {
       />
     );
   });
-  it('Renders list', () => {
+  it('Renders List Correctly', () => {
     expect(screen.getByTestId('list')).toBeDefined();
   });
-  it('Renders items and titles', () => {
+  it('Renders List component with custom props', () => {
     expect(screen.queryByText('Erik roberto')).toBeDefined();
     expect(screen.queryByText('Carlos Eduardo')).toBeDefined();
     expect(screen.queryByText(2)).toBeDefined();

@@ -1,27 +1,27 @@
 import React from 'react';
-import { ListItem } from '../listItems/listItem';
-import './list.scss';
+import { ListItem } from '../listItems/ListItem';
+import './List.scss';
 
-interface Prop {
-  obj: Array<Array<number | string>>;
+interface ListProps {
+  items: Array<Array<number | string>>;
   width?: string | number | undefined;
   height?: string | number | undefined;
 }
 
-export const List = ({ obj, width, height }: Prop) => (
-  <div
+export const List = ({ items, width, height }: ListProps) => (
+  <ul
     className="list-container"
     style={{ width: width || '100%', height: height || 'auto' }}
     data-testid="list"
   >
-    {obj.map((item, index, obj) => (
+    {items.map((item, index, items) => (
       <ListItem
-        title={item[0]}
-        item={item[1]}
-        last={index + 1 === obj.length}
+        itemTitle={item[0]}
+        itemText={item[1]}
+        lastItem={index + 1 === items.length}
       />
     ))}
-  </div>
+  </ul>
 );
 
 List.defaultProps = {

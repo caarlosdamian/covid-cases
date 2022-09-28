@@ -1,24 +1,24 @@
-import './listItem.scss';
+import './ListItem.scss';
 
-interface Props {
-  title: string | number;
-  item?: string | number;
-  last?: boolean;
+interface ListItemProps {
+  itemTitle: string | number;
+  itemText?: string | number;
+  lastItem?: boolean;
 }
 
-export const ListItem = ({ title, item, last }: Props) => (
-  <div
+export const ListItem = ({ itemTitle, itemText, lastItem }: ListItemProps) => (
+  <li
     className="list-item"
-    style={{ borderBlockEnd: last ? 'none' : '2px solid #DFE0EB' }}
+    style={{ borderBlockEnd: lastItem ? 'none' : '2px solid #DFE0EB' }}
   >
-    <div className="item-title">{title}</div>
+    <div className="item-title">{itemTitle}</div>
     <div className="item-extras">
-      <div className="single-extra">{item || 'Nan'}</div>
+      <div className="single-extra">{itemText}</div>
     </div>
-  </div>
+  </li>
 );
 
 ListItem.defaultProps = {
-  item: 'Nan',
-  last: false,
+  itemText: 'Nan',
+  lastItem: false,
 };

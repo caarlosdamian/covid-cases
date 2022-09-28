@@ -1,35 +1,20 @@
 .list-item{
     display: flex;
-    min-width: 100px;
-    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 600;
-    padding: 3px;
     .item-title{
-        max-width: 50%;
-        min-width: 50px;
-        flex-basis: 50%;
+        flex: 1;
         color:black;
-        text-align: left;
-        margin: 18px;
-        padding-left: 18px;
     }
 
     .item-extras{
-        text-align: right;
-        max-width: 75%;
-        min-width: 50px;
-        flex-basis: 50%;
         color: gray;
-        padding-right: 18px;
         display: flex;
-        margin: 18px;
-
-        .single-extra{
-            flex-basis: 100%;
-        }
+        flex: 1;
     }
 
 }
