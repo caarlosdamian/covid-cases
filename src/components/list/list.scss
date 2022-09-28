@@ -1,9 +1,5 @@
 .list-container{
-    border: 2px #DFE0EB solid;
     border-radius: 10px;
     transition: .2s;
-
-    &:hover{
-        border: 2px cornflowerblue solid;
-    }
+    font-size: 14px;
 }
