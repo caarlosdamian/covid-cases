@@ -12,9 +12,7 @@ export const ListItem = ({ itemTitle, itemText, lastItem }: ListItemProps) => (
     style={{ borderBlockEnd: lastItem ? 'none' : '2px solid #DFE0EB' }}
   >
     <div className="item-title">{itemTitle}</div>
-    <div className="item-extras">
-      <div className="single-extra">{itemText}</div>
-    </div>
+    <div className="item-extras">{itemText}</div>
   </li>
 );
 
