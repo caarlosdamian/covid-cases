@@ -6,12 +6,12 @@ import loginSliceReducer from './loginSlice';
 import toggleSliceReducer from './toggleSlice';
 import { useApi } from '../hooks/useApi';
 import { authApi } from './api';
-import { covidMXApi } from './apiCovidMx/apiCovidMx';
+import { covidMex } from './apiCovidMx/apiCovidMx';
 
 const reducers = combineReducers({
   [useApi.reducerPath]: useApi.reducer,
   [authApi.reducerPath]: authApi.reducer,
-  [covidMXApi.reducerPath]: covidMXApi.reducer,
+  [covidMex.reducerPath]: covidMex.reducer,
   login: loginSliceReducer,
   toggle: toggleSliceReducer,
 });

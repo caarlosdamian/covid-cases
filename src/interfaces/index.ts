@@ -28,7 +28,15 @@ export type Irow = {
   hash: string;
 };
 
-export type CovidMxData = {
+type regionType = {
+  iso: string;
+  name: string;
+  province: string;
+  lat: null | string;
+  long: null | string;
+};
+
+export type covidMexData = {
   date: string;
   confirmed: number;
   deaths: number;
@@ -40,13 +48,7 @@ export type CovidMxData = {
   active: number;
   active_diff: number;
   fatality_rate: number;
-  region: {
-    iso: string;
-    name: string;
-    province: string;
-    lat: null | string;
-    long: null | string;
-  };
+  region: regionType;
 };
 
 export interface IFormInputs {
