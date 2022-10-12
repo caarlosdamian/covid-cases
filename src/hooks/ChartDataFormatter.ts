@@ -1,10 +1,11 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-array-constructor */
+import { IChartProps } from '../interfaces';
 
-export const chartDataFormatter = (dataset: Array<any>) => {
+export const chartDataFormatter = ({ dataSet }: IChartProps) => {
   const label = new Array();
   const datas = new Array();
-  dataset.forEach(
+  dataSet.forEach(
     (
       element: { region: { province: string }; confirmed: number },
       index: number
