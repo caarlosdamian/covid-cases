@@ -10,7 +10,7 @@ export const covidMex = createApi({
     prepareHeaders: (headers) => {
       headers.set(
         'X-RapidAPI-Key',
-        `${import.meta.env.VITE_APP_X_RapidAPI_Key}`
+        '5fa7fac211msh51fc12a9a17b7c8p115165jsn8305e411adb4'
       );
       return headers;
     },
