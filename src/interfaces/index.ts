@@ -28,6 +28,29 @@ export type Irow = {
   hash: string;
 };
 
+type regionType = {
+  iso: string;
+  name: string;
+  province: string;
+  lat: null | string;
+  long: null | string;
+};
+
+export type covidMexData = {
+  date: string;
+  confirmed: number;
+  deaths: number;
+  recovered: number;
+  confirmed_diff: number;
+  deaths_diff: number;
+  recovered_diff: number;
+  last_update: string;
+  active: number;
+  active_diff: number;
+  fatality_rate: number;
+  region: regionType;
+};
+
 export interface IFormInputs {
   email: string;
   password: string;
