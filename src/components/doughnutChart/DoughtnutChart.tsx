@@ -7,5 +7,5 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 // eslint-disable-next-line max-len
 export const DoughtnutChart = ({ dataSet }: IChartProps) => (
-  <Doughnut data-testid="Chart" data={useChartDataFormatter(dataSet)} />
+  <Doughnut data-testid="Chart" data={useChartDataFormatter({ dataSet })} />
 );
