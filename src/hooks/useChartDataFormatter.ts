@@ -1,29 +1,25 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable no-array-constructor */
 import { IChartProps } from '../interfaces';
 
-export const chartDataFormatter = ({ dataSet }: IChartProps) => {
-  const label = new Array();
-  const datas = new Array();
-  dataSet.forEach(
-    (
-      element: { region: { province: string }; confirmed: number },
-      index: number
-    ) => {
-      label[index] = element.region.province;
-      datas[index] = element.confirmed;
-    }
+export const useChartDataFormatter = ({ dataSet }: IChartProps) => {
+  const label = dataSet.reduce(
+    (pre, cur) => pre.concat(cur.region.province),
+    new Array()
+  );
+  const datas = dataSet.reduce(
+    (pre, cur) => pre.concat(cur.confirmed),
+    new Array()
   );
   let temp;
   let temp2;
-  for (let i = 1; i < datas.length; i++) {
+  for (let i = 1; i < datas.length; i += 1) {
     let j = i;
     temp = datas[i];
     temp2 = label[i];
     while (j > 0 && datas[j - 1] > temp) {
       datas[j] = datas[j - 1];
       label[j] = label[j - 1];
-      j--;
+      j -= 1;
     }
     datas[j] = temp;
     label[j] = temp2;
@@ -56,6 +52,5 @@ export const chartDataFormatter = ({ dataSet }: IChartProps) => {
       },
     ],
   };
-
   return exportData;
 };
