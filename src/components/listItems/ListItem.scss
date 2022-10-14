@@ -1,26 +1,28 @@
+@import '../../tokens/index';
+
 .list-item{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    font-family: 'Mulish';
+    font-family: $primary-font;
     font-style: normal;
     font-weight: 600;
     text-transform: capitalize;
     .item-title{
         flex: 1;
-        color:black;
-        margin: 18px ;
-        padding-left: 18px;
+        color:$black-original;
+        margin: $eighteen-pixels ;
+        padding-left: $eighteen-pixels;
         text-align:left;
     }
 
     .item-extras{
-        color: gray;
+        color: $gray-original;
         flex: 1;
         text-align:right;
-        margin: 18px ;
-        padding-right: 18px;
+        margin: $eighteen-pixels ;
+        padding-right: $eighteen-pixels;
     }
 
 }
