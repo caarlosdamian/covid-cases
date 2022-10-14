@@ -1,0 +1,33 @@
+{
+    "pages":{
+        "login":{
+            "title":"Ingreso a la Cuenta",
+            "subtitle-1": "Si ya es un mienbro puede entrar con su correo",
+            "subtitle-2": " electrónico y contraseña.",
+            "form": {
+                "email":{
+                    "label":"Correo electrónico",
+                    "error":"El correo electrónico es requerido"
+                },
+                "password":{
+                    "label":"Contraseña",
+                    "error":"La contraseña es requerida"
+                },
+                "checkbox":"Recuerdame",
+                "submit":"Entrar a la cuenta"
+            },
+            "signup":{
+                "text":"¿ No tiene una cuenta ?",
+                "link":" Registrate aquí "
+            }
+        },
+        "datagrid":{
+            "error": "Oh no, hubo un error"
+        }
+    },
+    "tooltip": {
+        "success" : "exito",
+        "warning" : "advertencia",
+        "error" : "error"
+    }
+}
