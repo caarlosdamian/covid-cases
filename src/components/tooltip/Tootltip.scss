@@ -9,16 +9,16 @@
     margin: 5px;
 
     &.error{
-        background-color:tomato;
+        background-color:#F12B2C;
         border: none;
     }
 
     &.warning{
-        background-color:gold;
+        background-color:#FEC400;
     }
 
     &.success{
-        background-color: seagreen;
+        background-color: #29CC97;
     }
 
 }

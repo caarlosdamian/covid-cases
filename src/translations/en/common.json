@@ -1,0 +1,33 @@
+{
+    "pages":{
+        "login":{
+            "title":"Account Login",
+            "subtitle-1": "If you are already a member you can login with",
+            "subtitle-2": "your email address and password.",
+            "form": {
+                "email":{
+                    "label":"Email address",
+                    "error":"Email address is required"
+                },
+                "password":{
+                    "label":"Password",
+                    "error":"Password is required"
+                },
+                "checkbox":"Remember me",
+                "submit":"Login to Account"
+            },
+            "signup":{
+                "text":"Don't have an account ?",
+                "link":" Sign up here "
+            }
+        },
+        "datagrid":{
+            "error": "Oh no, there was an error"
+        }
+    },
+    "tooltip": {
+        "success" : "success",
+        "warning" : "warning",
+        "error" : "error"
+    }
+}
