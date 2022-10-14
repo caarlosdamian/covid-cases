@@ -97,3 +97,7 @@ export interface State {
     isOpen: boolean;
   };
 }
+
+export interface IChartProps {
+  dataSet: covidMexData[];
+}
