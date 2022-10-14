@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 import { SerializedError } from '@reduxjs/toolkit';
+import { useTranslation } from 'react-i18next';
 import { IFormInputs } from '../../interfaces';
 import { useGetAuthTokenMutation } from '../../redux/api';
 import { login } from '../../redux/loginSlice';
@@ -20,6 +21,8 @@ export const Login = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const { t } = useTranslation('common');
 
   const onSubmit: SubmitHandler<IFormInputs> = async (user) => {
     try {
@@ -42,10 +45,9 @@ export const Login = () => {
       </div>
 
       <div className="form-container">
-        <h1 className="header">Account Login</h1>
+        <h1 className="header">{t('pages.login.title')}</h1>
         <p className="text">
-          If you are already a member you can login with <br />
-          your email address and password.
+          {t('pages.login.subtitle-1')} <br /> {t('pages.login.subtitle-2')}
         </p>
 
         <form
@@ -55,7 +57,7 @@ export const Login = () => {
         >
           <div className="input-container">
             <label htmlFor="emailText" className="label-text">
-              Email address
+              {t('pages.login.form.email.label')}
             </label>
             <input
               id="emailText"
@@ -66,12 +68,14 @@ export const Login = () => {
             />
 
             {errors.email && (
-              <span className="span-error">Email address is required</span>
+              <span className="span-error">
+                {t('pages.login.form.email.error')}
+              </span>
             )}
           </div>
           <div className="input-container">
             <label htmlFor="passwordText" className="label-text">
-              Password
+              {t('pages.login.form.password.label')}
             </label>
             <input
               id="passwordText"
@@ -81,7 +85,9 @@ export const Login = () => {
               {...register('password', { required: true })}
             />
             {errors.password && (
-              <span className="span-error">Password is required</span>
+              <span className="span-error">
+                {t('pages.login.form.password.error')}
+              </span>
             )}
           </div>
 
@@ -93,7 +99,7 @@ export const Login = () => {
               {...register('remember')}
             />
             <label htmlFor="checkboxRemember" className="label-checkbox">
-              Remember me
+              {t('pages.login.form.checkbox')}
             </label>
           </div>
 
@@ -102,12 +108,12 @@ export const Login = () => {
             className="button-submit"
             data-testid="submitButton"
           >
-            Login to Account
+            {t('pages.login.form.submit')}
           </button>
         </form>
         <span className="span-text">
-          Dont have and account ?
-          <span className="span-link"> Sing up here</span>
+          {t('pages.login.signup.text')}
+          <span className="span-link">{t('pages.login.signup.link')}</span>
         </span>
       </div>
     </div>
