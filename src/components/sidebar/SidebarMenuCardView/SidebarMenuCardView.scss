@@ -18,11 +18,11 @@
     border-radius: 50px;
     box-sizing: border-box;
     margin-left: 20px;
-    width: 40px;
-    height: 40px;
+    width: $width-40;
+    height: $height-40;
     &.collapsed {
-      width: 30px;
-      height: 30px;
+      width: $width-30;
+      height: $height-30;
       margin-left: 0;
       margin-right: 20px;
     }
@@ -40,12 +40,12 @@
     }
   }
   .sidebar_name {
-    font-size: 18px;
+    font-size: $font-size-18;
     font-style: normal;
-    font-weight: 500;
-    line-height: 25px;
+    font-weight: $font-weight-500;
+    line-height: $line-height-25;
     letter-spacing: -0.01em;
-    color: $gray;
+    color: $cool-gray;
   }
 }
 

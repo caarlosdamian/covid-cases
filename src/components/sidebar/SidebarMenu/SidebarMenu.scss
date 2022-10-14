@@ -6,18 +6,18 @@
   
   .datagrid-container {
     display: flex;
-    background: $white-2;
+    background: $flash-white;
   
     .datagrid-container__grid {
-      background: $white-2;
-      padding: 24px;
+      background: $flash-white;
+      padding: $padding-24;
     }
   }
   
   .sidebar-menu {
-    background: $dark-blue;
-    color: $gray;
-    height: 100vh;
+    background: $yankees-blue;
+    color: $cool-gray;
+    height: $hundred-percent-vh;
     display: flex;
     flex-direction: column;
     border-top-right-radius: 8px;
@@ -35,9 +35,9 @@
   }
   
   .sidebar-line {
-    border: 0.031rem solid $gray;
+    border: 0.031rem solid $cool-gray;
     margin-top: 30px;
-    background: $gray;
+    background: $cool-gray;
   }
   
   .sidebar_menu-button {
@@ -45,8 +45,8 @@
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-    margin-left: 25px;
-    margin-top: 24px;
+    margin-left: $padding-24;
+    margin-top: $spacing-24;
     .sidebar_span {
       color: $white;
     }

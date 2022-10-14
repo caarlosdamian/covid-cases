@@ -1,7 +1,7 @@
 @import '../../tokens/index';
 
 .content__container {
-  background:$white-content ;
+  background:$ghost-white ;
   width: $hundred-percent-vw;
   height: $hundred-percent-vh;
   display: flex;
@@ -9,7 +9,7 @@
   justify-content: flex-start;
   .card__padding {
     padding-left: 56px;
-    padding-top: 24px;
+    padding-top: $spacing-24;
 
     .card__container {
       width: 70vw;

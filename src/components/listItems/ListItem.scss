@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: $hundred-percent-width;
     font-family: $primary-font;
     font-style: normal;
     font-weight: 600;
@@ -12,8 +12,8 @@
     .item-title{
         flex: 1;
         color:$black-original;
-        margin: $eighteen-pixels ;
-        padding-left: $eighteen-pixels;
+        margin: $spacing-18 ;
+        padding-left: $spacing-18;
         text-align:left;
     }
 
@@ -21,8 +21,8 @@
         color: $gray-original;
         flex: 1;
         text-align:right;
-        margin: $eighteen-pixels ;
-        padding-right: $eighteen-pixels;
+        margin: $spacing-18;
+        padding-right: $spacing-18;
     }
 
 }
