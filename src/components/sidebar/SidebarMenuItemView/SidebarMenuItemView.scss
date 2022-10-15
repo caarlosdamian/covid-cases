@@ -1,3 +1,5 @@
+@import '../../../tokens/index';
+
 @mixin transition($property) {
   transition: $property 0.2 ease-in-out;
 }
@@ -10,25 +12,25 @@
 
   a {
     display: flex !important;
-    color: #8d91a0;
+    color: $cool-gray;
     text-decoration: none;
     padding: 10px;
-    width: 100%;
+    width: $hundred-percent-width;
     border-radius: 5px;
   }
   a {
     display: flex;
 
     &:hover {
-      color: #535bf2;
+      color: $light-blue;
     }
   }
   .item-content {
-    width: 100%;
+    width: $hundred-percent-width;
     @include transition(width);
 
     .sidebar_label {
-      font-weight: 500px;
+      font-weight: $font-weight-500;
       margin-left: 30px;
       overflow: hidden;
     }

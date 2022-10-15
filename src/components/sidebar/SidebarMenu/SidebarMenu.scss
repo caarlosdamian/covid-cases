@@ -1,21 +1,23 @@
+@import "../../../tokens/index";
+
 @mixin transition($property) {
     transition: $property 0.2 ease-in-out;
   }
   
   .datagrid-container {
     display: flex;
-    background: #f2f2f2;
+    background: $flash-white;
   
     .datagrid-container__grid {
-      background: #f2f2f2;
-      padding: 24px;
+      background: $flash-white;
+      padding: $padding-24;
     }
   }
   
   .sidebar-menu {
-    background: #233043;
-    color: #8d91a0;
-    height: 100vh;
+    background: $yankees-blue;
+    color: $cool-gray;
+    height: $hundred-percent-vh;
     display: flex;
     flex-direction: column;
     border-top-right-radius: 8px;
@@ -33,9 +35,9 @@
   }
   
   .sidebar-line {
-    border: 0.031rem solid #8d91a0;
+    border: 0.031rem solid $cool-gray;
     margin-top: 30px;
-    background: #8d91a0;
+    background: $cool-gray;
   }
   
   .sidebar_menu-button {
@@ -43,15 +45,15 @@
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-    margin-left: 25px;
-    margin-top: 24px;
+    margin-left: $padding-24;
+    margin-top: $spacing-24;
     .sidebar_span {
-      color: #fff;
+      color: $white;
     }
     .sidebar_menu-button-icon {
       cursor: pointer;
       &.hover {
-        color: white;
+        color: $white;
       }
     }
   }

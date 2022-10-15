@@ -1,21 +1,23 @@
+@import '../../tokens/index';
+
 .content__container {
-  background: #f7f8fc;
-  width: 100vw;
-  height: 100vh;
+  background:$ghost-white ;
+  width: $hundred-percent-vw;
+  height: $hundred-percent-vh;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   .card__padding {
     padding-left: 56px;
-    padding-top: 24px;
+    padding-top: $spacing-24;
 
     .card__container {
       width: 70vw;
-      height: 80vh;
+      height: $eighty-percent-vh;
 
       &.collapse {
         width: 85vw;
-        height: 80vh;
+        height: $eighty-percent-vh;
       }
     }
   }

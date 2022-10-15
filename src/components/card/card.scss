@@ -1,8 +1,10 @@
+@import "../../../tokens/index";
+
 .card-container {
   display: flex;
-  margin-top: 10px;
-  border: 1px solid #dfe0eb;
-  border-radius: 8px;
+  margin-top: $spacing-10;
+  border: 1px solid $platinum;
+  border-radius: $border-radius-8;
   width: 258px;
   height: 134px;
   flex-direction: column;
@@ -10,37 +12,37 @@
   align-items: center;
 
   &:hover {
-    border-color: #0f044c;
+    border-color: $cetacean-blue;
     cursor: pointer;
   }
 
   .card-label {
-    font-family: Mulish;
+    font-family: $primary-font;
     font-style: normal;
-    font-weight: 700;
-    font-size: 19px;
+    font-weight: $font-weight-700;
+    font-size: $font-size-18;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.4px;
     color: #9fa2b4;
 
     &:hover {
-      color: #0f044c;
+      color: $cetacean-blue;
     }
   }
 
   .card-value {
-    font-family: Mulish;
+    font-family: $primary-font;
     font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
+    font-weight: $font-weight-700;
+    font-size: $font-size-40;
+    line-height: $line-height-50;
     text-align: center;
     letter-spacing: 1px;
-    color: #252733;
+    color: $charleston-blue;
 
     &:hover {
-      color: #0f044c;
+      color: $cetacean-blue;
     }
   }
 }

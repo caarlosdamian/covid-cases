@@ -1,3 +1,5 @@
+@import '../../tokens/index';
+
 .tip{
     min-width: 110px;
     width: auto;
@@ -9,16 +11,16 @@
     margin: 5px;
 
     &.error{
-        background-color:#F12B2C;
+        background-color: $tomato-red;
         border: none;
     }
 
     &.warning{
-        background-color:#FEC400;
+        background-color: $gold;
     }
 
     &.success{
-        background-color: #29CC97;
+        background-color: $seagreen;
     }
 
 }
