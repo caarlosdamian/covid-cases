@@ -1,0 +1,70 @@
+@import '../../tokens/index';
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: $font-weight-600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $charleston-blue;
+
+  .label-input-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: $platinum;
+  border-radius: 50%;
+  border: 2px solid #c5c7cd;
+}
+
+.container {
+  &:hover .label-input-checkbox ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .label-input-checkbox:checked ~ .checkmark {
+    background-color: $cetacean-blue;
+  }
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container {
+  .label-input-checkbox:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    top: 4px;
+    left: 3px;
+    width: 11px;
+    height: 10px;
+    background: url('../../assets/check.svg');
+    background-repeat: no-repeat;
+  }
+}
